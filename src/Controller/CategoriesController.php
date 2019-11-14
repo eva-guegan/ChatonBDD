@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CategoriesController extends AbstractController
 {
     /**
-     * @Route("/categories", name="categories")
+     * @Route("/", name="home")
      */
     public function index(CategorieRepository $repository)
     {
@@ -47,7 +47,7 @@ class CategoriesController extends AbstractController
             $em->flush();
 
             //je m'en vais
-            return $this->redirectToRoute("categories");
+            return $this->redirectToRoute("home");
         }
 
         return $this->render('categories/formulaire.html.twig', [
@@ -82,12 +82,38 @@ class CategoriesController extends AbstractController
             $em->flush();
 
             //je m'en vais
-            return $this->redirectToRoute("categories");
+            return $this->redirectToRoute("home");
         }
 
         return $this->render('categories/formulaire.html.twig', [
             'formulaire'=>$formulaire->createView(),
             'h1'=>"Modifier la catégorie ".$categorie->getTitre()
+        ]);
+    }
+
+    /**
+     * @Route("/categories/supprimer/{id}", name="categorie_supprimer")
+     */
+    public function supprimer(CategorieRepository $repository, $id, Request $request)
+    {
+        //chercher objet à modif
+        $categorie = $repository->find($id);
+
+        $formulaire=$this->createForm(CategorieType::class, $categorie);
+        $formulaire->handleRequest($request);
+
+        //Enregistrer dans BDD
+        if ($formulaire->isSubmitted() && $formulaire->isValid()){
+            $em=$this->getDoctrine()->getManager();
+            $em->remove($categorie);
+            $em->flush();
+
+            return $this->redirectToRoute("home");
+        }
+
+        return $this->render('categories/formulaire.html.twig', [
+            'formulaire'=>$formulaire->createView(),
+            'h1'=>"Supprimer la catégorie ".$categorie->getTitre()
         ]);
     }
 }

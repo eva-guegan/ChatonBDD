@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f5e69b1-2fa2-4930-a42e-8ff750efa6ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Controller/ChatonsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ChatonsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chatons/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chatons/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/menu/_menu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu/_menu.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,40 +15,13 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/chatons/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="69" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/ChatonsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/categories/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>catégorie</find>
       <find>cat</find>
+      <find>getC</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -65,7 +37,6 @@
         <option value="$PROJECT_DIR$/templates/menu/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/MenuController.php" />
-        <option value="$PROJECT_DIR$/templates/menu/_menu.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/CategoriesController.php" />
         <option value="$PROJECT_DIR$/../WebProduction/Symfony/templates/administration/carousel/edit_carousel.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/ChatonType.php" />
@@ -73,6 +44,7 @@
         <option value="$PROJECT_DIR$/templates/categories/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/chatons/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/ChatonsController.php" />
+        <option value="$PROJECT_DIR$/templates/menu/_menu.html.twig" />
       </list>
     </option>
   </component>
@@ -245,6 +217,12 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="chatons" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ChatonBDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatonBDD" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -290,12 +268,12 @@
       <workItem from="1573741068592" duration="2097000" />
       <workItem from="1574234566520" duration="4840000" />
       <workItem from="1574242724999" duration="12000" />
-      <workItem from="1574242737791" duration="2868000" />
+      <workItem from="1574242737791" duration="4139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20807000" />
+    <option name="totallyTimeSpent" value="22078000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -308,7 +286,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="87" y="29" width="1236" height="712" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2159864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -353,13 +330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="66" selection-start-line="10" selection-end-line="10" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/menu/_menu.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -433,20 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Categorie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Chaton.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/ChatonType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -471,13 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/chatons/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="69" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/categories/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -485,10 +434,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Chaton.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Categorie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="72" column="30" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ChatonsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        <state relative-caret-position="-26">
+          <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/chatons/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/menu/_menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="84" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
         </state>
       </provider>
     </entry>

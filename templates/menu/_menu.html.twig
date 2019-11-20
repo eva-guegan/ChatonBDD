@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             {% for cat in categorie %}
-                <li class="nav-item active"><a href="#" class="nav-link">{{ cat.Titre }}</a></li>
+                <li class="nav-item active"><a href="{{ path('chatons', {'id':cat.id}) }}" class="nav-link">{{ cat.Titre }}</a></li>
             {% endfor %}
         </ul>
     </div>

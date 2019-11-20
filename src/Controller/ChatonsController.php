@@ -28,7 +28,7 @@ class ChatonsController extends AbstractController
     }
 
     /**
-     * @Route("/chatons/ajouter", name="chaton_ajouter")
+     * @Route("/chaton/ajouter", name="chaton_ajouter")
      */
     public function ajouter(Request $request)
     {
@@ -62,7 +62,7 @@ class ChatonsController extends AbstractController
     }
 
     /**
-     * @Route("/chatons/modifier/{id}", name="chaton_modifier")
+     * @Route("/chaton/modifier/{id}", name="chaton_modifier")
      */
     public function modifier(ChatonRepository $repository, $id, Request $request)
     {
@@ -97,7 +97,7 @@ class ChatonsController extends AbstractController
     }
 
     /**
-     * @Route("/chatons/supprimer/{id}", name="chaton_supprimer")
+     * @Route("/chaton/supprimer/{id}", name="chaton_supprimer")
      */
     public function supprimer(ChatonRepository $repository, $id, Request $request)
     {

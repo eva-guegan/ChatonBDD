@@ -7,14 +7,14 @@
     <br />
     <table class="table">
         <tr>
-            <th>Titre</th>
+            <th>nom</th>
             <th>Description</th>
             <th></th>
             <th></th>
         </tr>
         {% for chaton in chatons %}
             <tr>
-                <td>{{ chaton.Titre }}</td>
+                <td>{{ chaton.Nom }}</td>
                 <td>{{ chaton.Description }}</td>
                 <td>
                     <a href="{{ path('chaton_modifier', { 'id':chaton.id }) }}" class="btn btn-primary">

@@ -11,11 +11,15 @@
             <th>Description</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         {% for cat in categories %}
             <tr>
                 <td>{{ cat.Titre }}</td>
                 <td>{{ cat.Description }}</td>
+                <td><a href="{{ path('chatons', { 'id':cat.id }) }}" class="btn btn-primary">
+                        <i class="far fa-cat"></i>
+                    </a></td>
                 <td>
                     <a href="{{ path('categorie_modifier', { 'id':cat.id }) }}" class="btn btn-primary">
                         <i class="far fa-edit"></i>

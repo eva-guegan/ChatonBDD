@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Chaton;
 use App\Form\ChatonType;
+use App\Repository\CategorieRepository;
 use App\Repository\ChatonRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,13 +13,17 @@ use Symfony\Component\Routing\Annotation\Route;
 class ChatonsController extends AbstractController
 {
     /**
-     * @Route("/azerty", name="azerty")
+     * @Route("/chatons/{id}", name="chatons")
      */
-    public function index(ChatonRepository $repository)
+    public function index(CategorieRepository $repository, $id)
     {
-        $Chatons=$repository->findAll();
-        return $this->render('Chatons/index.html.twig', [
-            'chatons'=>$Chatons
+        $categorie=$repository->find($id);
+
+        $chatons= $categorie->getChatons();
+
+        return $this->render('chatons/index.html.twig', [
+            "categorie"=>$categorie,
+            'chatons'=>$chatons
         ]);
     }
 
@@ -27,10 +32,10 @@ class ChatonsController extends AbstractController
      */
     public function ajouter(Request $request)
     {
-        $Chaton = new Chaton();
+        $chaton = new Chaton();
 
         //Création form
-        $formulaire=$this->createForm(ChatonType::class, $Chaton);
+        $formulaire=$this->createForm(ChatonType::class, $chaton);
 
         //récup données POST
         $formulaire->handleRequest($request);
@@ -41,7 +46,7 @@ class ChatonsController extends AbstractController
             $em=$this->getDoctrine()->getManager();
 
             //garder objet en BDD
-            $em->persist($Chaton);
+            $em->persist($chaton);
 
             //execute l'insert
             $em->flush();
